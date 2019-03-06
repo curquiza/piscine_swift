@@ -8,49 +8,62 @@
 
 import UIKit
 
+
+
+
 class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     
     var rslt : Double = 0.0
     var currentOp : String = ""
     
+    func debugLog(str: String) {
+        print("Press " + str)
+        print("New display = " + resultLabel.text!)
+        print("Result = " + String(rslt))
+        print("----------------")
+    }
+    
     @IBAction func numbers(_ sender: UIButton) {
-        //        print(sender.titleLabel?.text!)
         if (resultLabel.text == "0" || resultLabel.text == "+" || resultLabel.text == "-" || resultLabel.text == "/" || resultLabel.text == "*") {
             resultLabel.text = sender.titleLabel?.text
         } else if (resultLabel.text!.count < 16) {
             resultLabel.text =  (resultLabel.text)! + (sender.titleLabel?.text)!
         }
-        print("Press " + (sender.titleLabel?.text)!)
-        print("New display = " + resultLabel.text!)
+        debugLog(str: (sender.titleLabel?.text)!)
     }
 
     @IBAction func buttonAC(_ sender: UIButton) {
         rslt = 0.0
         currentOp = ""
         resultLabel.text = "0"
-        print("Press Reset")
+        debugLog(str: "AC")
     }
     
     @IBAction func buttonNeg(_ sender: UIButton) {
-        resultLabel.text = "-" + resultLabel.text!
-        print("Press Neg")
-//        rslt = Double!("-" + resultLabel.text!)
+        if (resultLabel.text!.hasPrefix("-")) {
+            let range = resultLabel.text!.index(after: resultLabel.text!.startIndex)..<resultLabel.text!.endIndex
+            resultLabel.text = String(resultLabel.text![range])
+        } else {
+            resultLabel.text = "-" + resultLabel.text!
+        }
+        debugLog(str: "NEG")
     }
     
-//    @IBAction func buttonPlus(_ sender: UIButton) {
+    @IBAction func buttonPlus(_ sender: UIButton) {
 //        if (currentOp != "") {
-//            //appliquer comme pour = mais sans afficher le result
+////            //appliquer comme pour = mais sans afficher le result
 //        } else {
-//            rslt = Double!(resultLabel.text?)
-//            resultLabel.text = "+"
-//            currentOp = "+"
+            rslt += (resultLabel.text! as NSString).doubleValue
+            resultLabel.text = "+"
+            currentOp = "+"
 //        }
-//    }
+        debugLog(str: "+")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func didReceiveMemoryWarning() {

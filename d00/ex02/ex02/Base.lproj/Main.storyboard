@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,11 +16,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ex02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cHg-ik-WN8">
-                                <rect key="frame" x="96" y="257.5" width="183" height="172.5"/>
+                                <rect key="frame" x="68.5" y="164" width="183" height="172.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybu-eb-tHu">
                                         <rect key="frame" x="0.0" y="0.0" width="183" height="20.5"/>
@@ -168,6 +168,9 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                                 <color key="backgroundColor" red="0.82652606870000001" green="0.41687338699999998" blue="0.66442083429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="+"/>
+                                                                <connections>
+                                                                    <action selector="buttonPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oge-cK-4un"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAv-cK-XQU">
                                                                 <rect key="frame" x="38" y="0.0" width="31" height="30"/>
@@ -205,6 +208,10 @@
                                                 <color key="tintColor" red="0.00034407383420000001" green="0.00016444692750000001" blue="0.0001652089857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="144" id="OJ4-HD-4ZF"/>
+                                            <constraint firstAttribute="width" constant="183" id="zpI-Qn-P2t"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>

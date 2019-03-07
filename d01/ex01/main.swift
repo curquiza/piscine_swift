@@ -4,7 +4,7 @@ let card3: Card = Card(color: Color.Spades, value: Value.Queen)
 
 print("First card color =", card.color)
 print("First card value =", card.value)
-print("Description of first card :", card.description)
+print("Description of first card :", card)
 
 print("-- isEqual test --")
 print("Should return false (cards not equal) ->", card.isEqual(card2))

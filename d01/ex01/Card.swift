@@ -12,7 +12,7 @@ class Card : NSObject {
     }
 
     override var description: String {
-        return "Card description -> Color : " + color.rawValue + ", Value : " + String(value.hashValue)
+        return "(" + String(value.hashValue) + ", " + color.rawValue + ")"
     }
 
     override func isEqual(_ object: Any?) -> Bool {

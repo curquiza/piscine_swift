@@ -169,13 +169,16 @@
                                                                 <color key="backgroundColor" red="0.82652606870000001" green="0.41687338699999998" blue="0.66442083429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="+"/>
                                                                 <connections>
-                                                                    <action selector="buttonPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oge-cK-4un"/>
+                                                                    <action selector="ops:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qWR-oI-ueH"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAv-cK-XQU">
                                                                 <rect key="frame" x="38" y="0.0" width="31" height="30"/>
                                                                 <color key="backgroundColor" red="0.82652606870000001" green="0.41687338699999998" blue="0.66442083429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="*"/>
+                                                                <connections>
+                                                                    <action selector="ops:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZlX-Oq-rBq"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -186,11 +189,17 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                                 <color key="backgroundColor" red="0.82652606870000001" green="0.41687338699999998" blue="0.66442083429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="-"/>
+                                                                <connections>
+                                                                    <action selector="ops:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZFw-vE-XjB"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGH-6k-a0o">
                                                                 <rect key="frame" x="38" y="0.0" width="31" height="30"/>
                                                                 <color key="backgroundColor" red="0.82652606870000001" green="0.41687338699999998" blue="0.66442083429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="/"/>
+                                                                <connections>
+                                                                    <action selector="ops:" destination="BYZ-38-t0r" eventType="touchUpInside" id="knA-if-doV"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -201,6 +210,9 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
                                                                 <color key="backgroundColor" red="0.82652606870000001" green="0.41687338699999998" blue="0.66442083429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="="/>
+                                                                <connections>
+                                                                    <action selector="buttonEqual:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z7q-8h-ZPh"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>

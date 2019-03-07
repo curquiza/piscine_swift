@@ -6,13 +6,12 @@ class Card : NSObject {
     var value: Value
 
     init (color: Color, value: Value) {
-        print("Card constructor called.")
         self.color = color
         self.value = value
     }
 
     override var description: String {
-        return "(" + String(value.hashValue) + ", " + color.rawValue + ")"
+        return "(" + String(value.rawValue) + ", " + color.rawValue + ")"
     }
 
     override func isEqual(_ object: Any?) -> Bool {

@@ -16,10 +16,13 @@ class Deck : NSObject {
 
 extension Array where Element:Card {
     func shuffle() -> [Card] {
-        for i in 51 ..>= 0 {
-            let rand = Int(arc4random_uniform(i))
+        var old_deck: [Card] = self
+        var shuffled_deck: [Card] = []
+        for i in (0 ..< 52).reversed() {
+            let rand = Int(arc4random_uniform(UInt32(i + 1)))
+            shuffled_deck.append(old_deck[rand])
+            old_deck.remove(at: rand)
         }
-        return self
-        // return sort { Float($0.value) < Float($1.value) }
+        return shuffled_deck
     }
 }

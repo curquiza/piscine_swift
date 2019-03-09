@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Segue :", segue.identifier!)
+        print("In preparForSegue (ViewController) :", segue.identifier!)
     }
     
     override func viewDidLoad() {
@@ -42,5 +42,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func unWindSegue(segue: UIStoryboardSegue) {
+        print("In unWindSegue (ViewController) :", segue.identifier!)
+        self.deathTableView.reloadData()
+    }
+    
 }
 

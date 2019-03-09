@@ -18,6 +18,8 @@ class AddNoteViewController: UIViewController {
         print("Name field :", nameField.text!)
         print("Date picker field :", datePicker.date)
         print("Description field :", descriptionField.text!)
+        
+        performSegue(withIdentifier: "doneSegue", sender: "Foo")
     }
 
     override func viewDidLoad() {
@@ -30,5 +32,14 @@ class AddNoteViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("In prepareForSegue (AddNoteViewController) :", segue.identifier!)
+        if segue.identifier == "doneSegue" {
+            if (nameField.text! != "") {
+                Data.deathNotes.append(Note(name: nameField.text!, date: datePicker.date, description: descriptionField.text!))
+            }
+        }
     }
 }

@@ -24,6 +24,7 @@ class AddNoteViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         descriptionField!.layer.borderWidth = 1
+        datePicker.minimumDate = Date()
     }
     
     override func didReceiveMemoryWarning() {

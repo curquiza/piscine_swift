@@ -14,6 +14,7 @@
 		DB197CD62232B4660047C656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB197CD52232B4660047C656 /* Assets.xcassets */; };
 		DB197CD92232B4660047C656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB197CD72232B4660047C656 /* LaunchScreen.storyboard */; };
 		DB197CE12232B5780047C656 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB197CE02232B5780047C656 /* Model.swift */; };
+		DB9058432233F910000B5675 /* DeathNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9058422233F910000B5675 /* DeathNoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DB197CD82232B4660047C656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB197CDA2232B4660047C656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB197CE02232B5780047C656 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DB9058422233F910000B5675 /* DeathNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathNoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				DB197CD72232B4660047C656 /* LaunchScreen.storyboard */,
 				DB197CDA2232B4660047C656 /* Info.plist */,
 				DB197CE02232B5780047C656 /* Model.swift */,
+				DB9058422233F910000B5675 /* DeathNoteTableViewCell.swift */,
 			);
 			path = "death-note";
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				DB197CE12232B5780047C656 /* Model.swift in Sources */,
 				DB197CD12232B4660047C656 /* ViewController.swift in Sources */,
 				DB197CCF2232B4660047C656 /* AppDelegate.swift in Sources */,
+				DB9058432233F910000B5675 /* DeathNoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

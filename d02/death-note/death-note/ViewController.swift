@@ -22,10 +22,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell")
-        cell?.textLabel?.text = Data.deathNotes[indexPath.row].name
-        cell?.detailTextLabel?.text = Data.deathNotes[indexPath.row].description
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell") as! DeathNoteTableViewCell
+        cell.note = Data.deathNotes[indexPath.row]
+//        cell?.textLabel?.text = Data.deathNotes[indexPath.row].name
+//        cell?.detailTextLabel?.text = Data.deathNotes[indexPath.row].description
+        return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

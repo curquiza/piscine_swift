@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 //        if (resultLabel.text == "0" || resultLabel.text == "+" || resultLabel.text == "-" || resultLabel.text == "/" || resultLabel.text == "*" || resultLabel.text == "Error") {
         if (restart == true) {
             resultLabel.text = sender.titleLabel?.text
-        } else if (resultLabel.text!.count < 16) {
+        } else if (resultLabel.text!.count < 20) {
             resultLabel.text =  (resultLabel.text)! + (sender.titleLabel?.text)!
         }
         restart = false

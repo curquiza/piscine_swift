@@ -16,3 +16,10 @@ struct Tweet : CustomStringConvertible {
         return "(name: \(name), text: \(text))"
     }
 }
+
+struct TweetData {
+    static var tweets: [Tweet] = [
+        Tweet(name: "Tweet 1", text: "Texte de tweet 1"),
+        Tweet(name: "Tweet 2", text: "Texte de tweet 2"),
+    ]
+}

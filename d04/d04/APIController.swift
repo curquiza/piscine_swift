@@ -13,7 +13,8 @@ protocol APITwitterDelegate: class {
     func tweetError(error: NSError)
 }
 
-class APIController: APITwitterDelegate {
+//class APIController: APITwitterDelegate {
+class APIController {
     
     weak var delegate : APITwitterDelegate?
     let token: String
@@ -23,13 +24,13 @@ class APIController: APITwitterDelegate {
         self.token = token
     }
     
-    func manageTweet(tweet: [Tweet]) {
-        print("manageTweet function")
-    }
-    
-    func tweetError(error: NSError) {
-        print("tweetError function")
-    }
+//    func manageTweet(tweet: [Tweet]) {
+//        print("manageTweet function")
+//    }
+//
+//    func tweetError(error: NSError) {
+//        print("tweetError function")
+//    }
     
     func get100LastTweets(str: String) {
         print("100LastTweets function")

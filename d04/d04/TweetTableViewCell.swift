@@ -12,7 +12,8 @@ class TweetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var tweetTextLabel: UILabel!
-    
+    @IBOutlet weak var dateLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,6 +30,9 @@ class TweetTableViewCell: UITableViewCell {
             if let t = tweet {
                 nameLabel?.text = t.name
                 tweetTextLabel?.text = t.text
+                let formatter = DateFormatter()
+                formatter.dateFormat = "dd/MM/yyyy HH:mm"
+                dateLabel?.text = formatter.string(from: t.date)
             }
         }
     }

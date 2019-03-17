@@ -66,12 +66,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap0-pQ-KzS">
-                                <rect key="frame" x="172" y="575" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxn-Wv-oEP">
+                                <rect key="frame" x="172" y="328" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="titi"/>
                                 <connections>
-                                    <action selector="titiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zd0-cO-Mbe"/>
+                                    <action selector="titiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eRU-uU-hbs"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -14,6 +14,7 @@
 		DB3499D222392C8B0072F27C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3499D022392C8B0072F27C /* LaunchScreen.storyboard */; };
 		DB3499DA22392CD10072F27C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3499D922392CD10072F27C /* Model.swift */; };
 		DB3499DC22392D0D0072F27C /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3499DB22392D0D0072F27C /* APIController.swift */; };
+		DB460FB9223EA1CB009D1940 /* APITwitterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB460FB8223EA1CB009D1940 /* APITwitterDelegate.swift */; };
 		DBF61D5B223BB35A00C68130 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF61D5A223BB35A00C68130 /* TweetTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		DB3499D322392C8B0072F27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB3499D922392CD10072F27C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DB3499DB22392D0D0072F27C /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		DB460FB8223EA1CB009D1940 /* APITwitterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITwitterDelegate.swift; sourceTree = "<group>"; };
 		DBF61D5A223BB35A00C68130 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				DB3499D922392CD10072F27C /* Model.swift */,
 				DB3499DB22392D0D0072F27C /* APIController.swift */,
 				DBF61D5A223BB35A00C68130 /* TweetTableViewCell.swift */,
+				DB460FB8223EA1CB009D1940 /* APITwitterDelegate.swift */,
 			);
 			path = d04;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				DB3499CA22392C8B0072F27C /* ViewController.swift in Sources */,
 				DBF61D5B223BB35A00C68130 /* TweetTableViewCell.swift in Sources */,
 				DB3499C822392C8B0072F27C /* AppDelegate.swift in Sources */,
+				DB460FB9223EA1CB009D1940 /* APITwitterDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

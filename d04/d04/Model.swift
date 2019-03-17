@@ -11,15 +11,17 @@ import Foundation
 struct Tweet : CustomStringConvertible {
     let name: String
     let text: String
+    let date: Date
     
     var description: String {
-        return "(name: \(name), text: \(text))"
+        return "(name: \(name), text: \(text), date: \(date)"
     }
 }
+//
+//struct TweetData {
+//    static var tweets: [Tweet] = [
+//        Tweet(name: "Tweet 1", text: "Texte de tweet 1"),
+//        Tweet(name: "Tweet 2", text: "Texte de tweet 2"),
+//    ]
+//}
 
-struct TweetData {
-    static var tweets: [Tweet] = [
-        Tweet(name: "Tweet 1", text: "Texte de tweet 1"),
-        Tweet(name: "Tweet 2", text: "Texte de tweet 2"),
-    ]
-}

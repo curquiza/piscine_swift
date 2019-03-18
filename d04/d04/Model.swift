@@ -17,11 +17,11 @@ struct Tweet : CustomStringConvertible {
         return "(name: \(name), text: \(text), date: \(date)"
     }
 }
-//
-//struct TweetData {
-//    static var tweets: [Tweet] = [
-//        Tweet(name: "Tweet 1", text: "Texte de tweet 1"),
-//        Tweet(name: "Tweet 2", text: "Texte de tweet 2"),
-//    ]
-//}
+
+struct TweetData {
+    static var tweets: [Tweet] = [
+        Tweet(name: "Tweet 1", text: "Texte de tweet 1", date: Date()),
+        Tweet(name: "Tweet 2", text: "Texte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2ddddddddd", date: Date()),
+    ]
+}
 

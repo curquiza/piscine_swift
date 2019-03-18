@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APITwitterDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APITwitterDelegate, UITextFieldDelegate {
 
     var apiController: APIController?
     var tweets: [Tweet] = []
+    @IBOutlet weak var textField: UITextField!
     
     @IBOutlet weak var tweetTableView: UITableView! {
         didSet {
@@ -22,9 +23,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Tweets"
+        textField.delegate = self
         getToken()
-//        apiController?.get100LastTweets(str: "ecole_42")
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {

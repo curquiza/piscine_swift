@@ -19,7 +19,7 @@ class APIController {
     }
     
     func get100LastTweets(str: String) {
-        let count: Int = 5
+        let count: Int = 100
         print("100LastTweets function, str =", str, " count =", count)
         let escapedString = str.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         print("-> escaped str =", escapedString)

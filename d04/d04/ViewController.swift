@@ -27,16 +27,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         textField.delegate = self
         getToken()
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("Press enter")
+        if let t = textField.text {
+            if (t != "") {
+                print("-> with text field : \(t)")
+                self.apiController?.get100LastTweets(str: t)
+            }
+        }
+        return true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-//    @IBAction func last100TweetsRequest(_ sender: UIButton) {
-//        print("ViewController - last100TweetsRequest")
-//    }
-//
     func manageTweet(tweets: [Tweet]) {
         print("manageTweet function")
         self.tweets = tweets

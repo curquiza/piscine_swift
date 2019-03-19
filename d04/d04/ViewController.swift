@@ -21,6 +21,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    // enlever la selection de cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Tweets"
@@ -30,11 +35,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("Press enter")
-        if let t = textField.text {
-            if (t != "") {
-                print("-> with text field : \(t)")
-                self.apiController?.get100LastTweets(str: t)
-            }
+        let t = textField.text!
+        if (t != "") {
+            print("-> with text field : \(t)")
+            self.apiController?.get100LastTweets(str: t)
         }
         return true
     }

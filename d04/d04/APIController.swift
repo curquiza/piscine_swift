@@ -18,13 +18,36 @@ class APIController {
         self.token = token
     }
     
+//    struct TweetArray: Codable {
+//        let statuses: [Tweet1]
+//    }
+//
+//    struct Tweet1: Codable {
+//        let text: String
+//        let user: User
+//        let created_at: String
+//    }
+//
+//    struct  User: Codable {
+//        let name: String
+//    }
+    
     func get100LastTweets(str: String) {
         let count: Int = 100
         print("100LastTweets function, str =", str, " count =", count)
-        let escapedString = str.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-        print("-> escaped str =", escapedString)
         
-        let url = NSURL(string: "https://api.twitter.com/1.1/search/tweets.json?q=\(escapedString)&count=\(count)")
+//        let escapedString = str.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+//        print("-> escaped str =", escapedString)
+//        let url = NSURL(string: "https://api.twitter.com/1.1/search/tweets.json?q=\(escapedString)&count=\(count)")
+
+        // pas besoin d'escape
+        var component = URLComponents(string: "https://api.twitter.com/1.1/search/tweets.json")
+        component?.queryItems = [
+            URLQueryItem(name: "q", value: str),
+            URLQueryItem(name: "count", value: String(count))
+        ]
+        let url = component?.url
+        
         let request = NSMutableURLRequest(url: url! as URL)
         request.httpMethod = "GET"
         request.setValue("Bearer " + self.token, forHTTPHeaderField: "Authorization")
@@ -37,10 +60,14 @@ class APIController {
             else if let d = data {
                 do {
                     var tweets: [Tweet] = []
+//                    let result = try JSONDecoder().decode(TweetArray.self, from: data!)
                     if let dic: NSDictionary = try JSONSerialization.jsonObject(with: d, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                         if let tweetArray = dic["statuses"] as? [[String: AnyObject]] {
                             print("-> All tweets :")
                             for tweet in tweetArray {
+//                                if let tweetText = tweet["text"] as? String {
+//
+//                                }
                                 let tweetText: String = tweet["text"] as! String
                                 let tweetUserName: String = tweet["user"]?["name"] as! String
                                 let date_str = tweet["created_at"] as! String

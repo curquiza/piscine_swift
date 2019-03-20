@@ -86,10 +86,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-//    @IBAction func titiButton(_ sender: UIButton) {
-//        apiController?.get100LastTweets(str: "ecole 42")
-//    }
-    
     // GET TWITTER TOKEN
     
     func getToken() {

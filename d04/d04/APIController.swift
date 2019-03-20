@@ -18,19 +18,19 @@ class APIController {
         self.token = token
     }
     
-//    struct TweetArray: Codable {
-//        let statuses: [Tweet1]
-//    }
-//
-//    struct Tweet1: Codable {
-//        let text: String
-//        let user: User
-//        let created_at: String
-//    }
-//
-//    struct  User: Codable {
-//        let name: String
-//    }
+    struct TweetArray: Codable {
+        let statuses: [TweetRslt]
+    }
+
+    struct TweetRslt: Codable {
+        let text: String
+        let user: User
+        let created_at: String
+    }
+
+    struct  User: Codable {
+        let name: String
+    }
     
     func get100LastTweets(str: String) {
         let count: Int = 100
@@ -61,28 +61,47 @@ class APIController {
             else if let d = data {
                 do {
                     var tweets: [Tweet] = []
-//                    let result = try JSONDecoder().decode(TweetArray.self, from: data!)
-                    if let dic: NSDictionary = try JSONSerialization.jsonObject(with: d, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-                        if let tweetArray = dic["statuses"] as? [[String: AnyObject]] {
-                            print("-> All tweets :")
-                            for tweet in tweetArray {
-//                                if let tweetText = tweet["text"] as? String {
-//
-//                                }
-                                let tweetText: String = tweet["text"] as! String
-                                let tweetUserName: String = tweet["user"]?["name"] as! String
-                                let date_str = tweet["created_at"] as! String
-                                let formatter = DateFormatter()
-                                formatter.dateFormat = "E MMM dd HH:mm:ss Z yyyy"
-                                if let tweetCreationDate = formatter.date(from: date_str) {
-                                    let newTweetInArray = Tweet(name: tweetUserName, text: tweetText, date: tweetCreationDate)
-                                    print(newTweetInArray)
-                                    print("-------")
-                                    tweets.append(newTweetInArray)
-                                }
-                            }
+                    
+                    let result = try JSONDecoder().decode(TweetArray.self, from: d)
+                    
+                    for tweet in result.statuses {
+                        let tweetText: String = tweet.text
+                        let tweetUserName: String = tweet.user.name
+                        let date_str = tweet.created_at
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "E MMM dd HH:mm:ss Z yyyy"
+                        if let tweetCreationDate = formatter.date(from: date_str) {
+                            let newTweetInArray = Tweet(name: tweetUserName, text: tweetText, date: tweetCreationDate)
+                            print(newTweetInArray)
+                            print("-------")
+                            tweets.append(newTweetInArray)
                         }
                     }
+                    
+                    
+//                    if let dic: NSDictionary = try JSONSerialization.jsonObject(with: d, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+//                        if let tweetArray = dic["statuses"] as? [[String: AnyObject]] {
+//                            print("-> All tweets :")
+//                            for tweet in tweetArray {
+////                                if let tweetText = tweet["text"] as? String {
+////
+////                                }
+//                                let tweetText: String = tweet["text"] as! String
+//                                let tweetUserName: String = tweet["user"]?["name"] as! String
+//                                let date_str = tweet["created_at"] as! String
+//                                let formatter = DateFormatter()
+//                                formatter.dateFormat = "E MMM dd HH:mm:ss Z yyyy"
+//                                if let tweetCreationDate = formatter.date(from: date_str) {
+//                                    let newTweetInArray = Tweet(name: tweetUserName, text: tweetText, date: tweetCreationDate)
+//                                    print(newTweetInArray)
+//                                    print("-------")
+//                                    tweets.append(newTweetInArray)
+//                                }
+//                            }
+//                        }
+//                    }
+                    
+                    
                     self.delegate?.manageTweet(tweets: tweets)
                 }
                 catch (let e) {

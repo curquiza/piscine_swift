@@ -94,7 +94,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if let api_secret_key = ProcessInfo.processInfo.environment["TWITTER_API_SECRET_KEY"] {
                 let bearer = ((api_key + ":" + api_secret_key).data(using: String.Encoding.utf8))!.base64EncodedString(options: NSData.Base64EncodingOptions (rawValue: 0))
                 
-                let url = NSURL(string: "https://api.twitter.com/oauth2/tokn")
+                let url = NSURL(string: "https://api.twitter.com/oauth2/token")
                 let request = NSMutableURLRequest(url: url! as URL)
                 request.httpMethod = "POST"
                 request.setValue("Basic " + bearer, forHTTPHeaderField: "Authorization")

@@ -38,7 +38,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let t = textField.text!
         if (t != "") {
             print("-> with text field : \(t)")
-            self.apiController?.get100LastTweets(str: t)
+            if self.apiController != nil {
+                self.apiController?.get100LastTweets(str: t)
+            } else {
+              launchAlert(str: "Impossible to fetch Twitter data.")
+            }
         }
         return true
     }
@@ -59,6 +63,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tweetError(error: NSError) {
         print("tweetError function")
         print("-> Error : \(error)")
+        launchAlert(str: error.localizedDescription)
+    }
+    
+    func launchAlert(str: String) {
+        let alert = UIAlertController(title: "An error occured", message: str, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("Alert : \(str)")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,9 +86,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    @IBAction func titiButton(_ sender: UIButton) {
-        apiController?.get100LastTweets(str: "ecole 42")
-    }
+//    @IBAction func titiButton(_ sender: UIButton) {
+//        apiController?.get100LastTweets(str: "ecole 42")
+//    }
     
     // GET TWITTER TOKEN
     
@@ -85,7 +98,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if let api_secret_key = ProcessInfo.processInfo.environment["TWITTER_API_SECRET_KEY"] {
                 let bearer = ((api_key + ":" + api_secret_key).data(using: String.Encoding.utf8))!.base64EncodedString(options: NSData.Base64EncodingOptions (rawValue: 0))
                 
-                let url = NSURL(string: "https://api.twitter.com/oauth2/token")
+                let url = NSURL(string: "https://api.twitter.com/oauth2/tokn")
                 let request = NSMutableURLRequest(url: url! as URL)
                 request.httpMethod = "POST"
                 request.setValue("Basic " + bearer, forHTTPHeaderField: "Authorization")
@@ -99,6 +112,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //                    print(response!)
                     if let err = error {
                         print(err)
+                        self.launchAlert(str: "Impossible to get Twitter token.")
                     }
                     else if let d = data {
                         do {
@@ -109,11 +123,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                                     self.apiController = APIController(apiTwitterDelegate: self, token: accessToken)
                                 } else {
                                     print("No access_token")
+                                    self.launchAlert(str: "Impossible to get Twitter token.")
                                 }
                             }
                         }
                         catch (let err) {
                             print(err)
+                            self.launchAlert(str: "Impossible to get Twitter token.")
                         }
                     }
 //                    sema.signal()

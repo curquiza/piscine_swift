@@ -52,6 +52,7 @@ class APIController {
         request.httpMethod = "GET"
         request.setValue("Bearer " + self.token, forHTTPHeaderField: "Authorization")
         
+    
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             (data, response, error) in
             if let err = error {
@@ -85,7 +86,7 @@ class APIController {
                     self.delegate?.manageTweet(tweets: tweets)
                 }
                 catch (let e) {
-                    print("Catch error: \(e)")
+                    self.delegate?.tweetError(error: e as NSError)
                 }
                 
             }

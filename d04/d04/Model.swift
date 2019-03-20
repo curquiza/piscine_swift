@@ -18,10 +18,10 @@ struct Tweet : CustomStringConvertible {
     }
 }
 
-struct TweetData {
-    static var tweets: [Tweet] = [
-        Tweet(name: "Tweet 1", text: "Texte de tweet 1", date: Date()),
-        Tweet(name: "Tweet 2", text: "Texte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2ddddddddd", date: Date()),
-    ]
-}
+//struct TweetData {
+//    static var tweets: [Tweet] = [
+//        Tweet(name: "Tweet 1", text: "Texte de tweet 1", date: Date()),
+//        Tweet(name: "Tweet 2", text: "Texte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2dddddddddTexte de tweet 2ddddddddd", date: Date()),
+//    ]
+//}
 

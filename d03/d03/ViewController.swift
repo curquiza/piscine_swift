@@ -24,11 +24,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! CollectionViewCell
-        let imageURL = URL(string: Photos[indexPath.row].url)!
-        let imageData: NSData = NSData(contentsOf: imageURL)!
-        let image = UIImage(data: imageData as Data)
+        let image = urlToUIImage(stringURL: Photos[indexPath.row].url)
         cell.displayContent(image: image!)
         return cell
+    }
+    
+    func urlToUIImage(stringURL: String) -> UIImage? {
+        let imageURL = URL(string: stringURL)!
+        let imageData: NSData = NSData(contentsOf: imageURL)!
+        return UIImage(data: imageData as Data)
     }
     
     override func viewDidLoad() {

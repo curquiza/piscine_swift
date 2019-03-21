@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+//    let queue = DispatchQueue.global(qos: DispatchQoS.background.qosClass)
+//    let main = DispatchQueue.main
+//    var isAlert: Bool = false
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -23,17 +26,36 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! CollectionViewCell
-        let image = urlToUIImage(stringURL: Photos[indexPath.row].url)
-        cell.displayContent(image: image!)
+        
+//        let qos = DispatchQoS.background.qosClass
+//        let queue = DispatchQueue.global(qos: qos)
+//        let main = DispatchQueue.main
+        
+//        self.queue.async {
+//            let image = self.urlToUIImage(stringURL: Photos[indexPath.row].url)
+//            self.main.async {
+//                if image == nil {
+//                    print(Photos[indexPath.row].title)
+////                    self.launchAlert(str: "Impossible to fetch all the data")
+////                    if (self.isAlert == false) {
+////                        self.launchAlert(str: "Impossible to fetch all the data")
+////                        self.isAlert = true
+////                    }
+//                    cell.imageView.backgroundColor = .black
+//                } else {
+//                    cell.displayContent(image: image!)
+//                }
+//            }
+//        }
+        
+        cell.displayContent(strURL: Photos[indexPath.row].url)
+        
         return cell
     }
     
-    func urlToUIImage(stringURL: String) -> UIImage? {
-        let imageURL = URL(string: stringURL)!
-        let imageData: NSData = NSData(contentsOf: imageURL)!
-        return UIImage(data: imageData as Data)
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +87,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func launchAlert(str: String) {
+        let alert = UIAlertController(title: "An error occured", message: str, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("Alert : \(str)")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }
 

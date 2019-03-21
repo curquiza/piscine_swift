@@ -38,16 +38,24 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l00-ed-1Xd">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                 </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jt9-Sm-7mB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="l00-ed-1Xd" firstAttribute="centerX" secondItem="hL4-FA-7UP" secondAttribute="centerX" id="6GA-gV-bQ3"/>
-                                            <constraint firstItem="l00-ed-1Xd" firstAttribute="height" secondItem="hL4-FA-7UP" secondAttribute="height" id="HdC-l8-0Qr"/>
-                                            <constraint firstItem="l00-ed-1Xd" firstAttribute="centerY" secondItem="hL4-FA-7UP" secondAttribute="centerY" id="IBA-rh-yUH"/>
-                                            <constraint firstItem="l00-ed-1Xd" firstAttribute="width" secondItem="hL4-FA-7UP" secondAttribute="width" id="XL7-Vc-mMz"/>
+                                            <constraint firstItem="Jt9-Sm-7mB" firstAttribute="height" secondItem="l00-ed-1Xd" secondAttribute="height" id="W4K-5a-bL6"/>
+                                            <constraint firstItem="Jt9-Sm-7mB" firstAttribute="centerY" secondItem="l00-ed-1Xd" secondAttribute="centerY" id="YhR-pE-9bg"/>
+                                            <constraint firstItem="l00-ed-1Xd" firstAttribute="centerY" secondItem="hL4-FA-7UP" secondAttribute="centerY" id="c9i-se-tRN"/>
+                                            <constraint firstItem="Jt9-Sm-7mB" firstAttribute="centerX" secondItem="l00-ed-1Xd" secondAttribute="centerX" id="fhY-a3-des"/>
+                                            <constraint firstItem="l00-ed-1Xd" firstAttribute="centerX" secondItem="hL4-FA-7UP" secondAttribute="centerX" id="nu1-bJ-I6c"/>
+                                            <constraint firstItem="Jt9-Sm-7mB" firstAttribute="width" secondItem="l00-ed-1Xd" secondAttribute="width" id="oGR-s8-WsH"/>
+                                            <constraint firstItem="l00-ed-1Xd" firstAttribute="height" secondItem="hL4-FA-7UP" secondAttribute="height" id="oTQ-jn-F0d"/>
+                                            <constraint firstItem="l00-ed-1Xd" firstAttribute="width" secondItem="hL4-FA-7UP" secondAttribute="width" id="woL-vR-nOW"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="l00-ed-1Xd" id="8az-gm-nDE"/>
+                                            <outlet property="spinner" destination="Jt9-Sm-7mB" id="0u8-2B-hs8"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

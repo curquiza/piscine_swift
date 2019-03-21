@@ -50,7 +50,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //            }
 //        }
         
-        cell.displayContent(strURL: Photos[indexPath.row].url)
+        cell.displayContent(strURL: Photos[indexPath.item].url)
         
         return cell
     }

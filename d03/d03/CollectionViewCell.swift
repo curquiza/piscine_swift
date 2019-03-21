@@ -29,7 +29,7 @@ class CollectionViewCell: UICollectionViewCell {
                     if image == nil {
                         self.spinner.stopAnimating()
                         self.imageView.backgroundColor = .black
-                        self.launchAlert(str: "Impossible to fetch photo")
+                        self.launchAlert(str: "Impossible to fetch data")
                     } else {
                         self.imageView.image = image
                         self.imageView.contentMode = UIViewContentMode.scaleAspectFit
@@ -43,7 +43,8 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     func urlToUIImage(stringURL: String) -> UIImage? {
-        let imageURL = URL(string: stringURL)!
+//        let imageURL = URL(string: stringURL)!
+        guard let imageURL = URL(string: stringURL) else {return nil}
         if let imageData: NSData = NSData(contentsOf: imageURL) {
             return UIImage(data: imageData as Data)
         }

@@ -42,11 +42,26 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     func setZoomScale() {
         let imageViewSize = imageView!.bounds.size
         let scrollViewSize = photoScrollView.bounds.size
+//        let safe = view.safeAreaLayoutGuide.layoutFrame.height
+//        print("tto")
+//        print(imageViewSize)
+//        print(scrollViewSize)
+//        print(safe)
         let widthScale = scrollViewSize.width / imageViewSize.width
         let heightScale = scrollViewSize.height / imageViewSize.height
         
         photoScrollView.minimumZoomScale = min(widthScale, heightScale)
         photoScrollView.zoomScale = 1.0
     }
+    
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//
+//        coordinator .animate(alongsideTransition: { context in
+//            let newImageView = self.imageView
+//            newImageView?.bounds = (self.imageView?.bounds)!
+//            newImageView?.center = (self.imageView?.center)!
+//        }, completion: nil)
+//        setZoomScale()
+//    }
 
 }

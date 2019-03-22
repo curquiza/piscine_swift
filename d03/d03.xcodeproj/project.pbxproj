@@ -14,6 +14,7 @@
 		DB653E99224399050015F9C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB653E97224399050015F9C8 /* LaunchScreen.storyboard */; };
 		DB653EA52243C6810015F9C8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB653EA42243C6810015F9C8 /* Model.swift */; };
 		DB653EA72243C7B80015F9C8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB653EA62243C7B80015F9C8 /* CollectionViewCell.swift */; };
+		DB8F9F3C2244EC54000FC18E /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8F9F3B2244EC54000FC18E /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DB653E9A224399050015F9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB653EA42243C6810015F9C8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DB653EA62243C7B80015F9C8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		DB8F9F3B2244EC54000FC18E /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				DB653E9A224399050015F9C8 /* Info.plist */,
 				DB653EA42243C6810015F9C8 /* Model.swift */,
 				DB653EA62243C7B80015F9C8 /* CollectionViewCell.swift */,
+				DB8F9F3B2244EC54000FC18E /* PhotoViewController.swift */,
 			);
 			path = d03;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				DB653E91224399050015F9C8 /* ViewController.swift in Sources */,
 				DB653EA72243C7B80015F9C8 /* CollectionViewCell.swift in Sources */,
 				DB653E8F224399050015F9C8 /* AppDelegate.swift in Sources */,
+				DB8F9F3C2244EC54000FC18E /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

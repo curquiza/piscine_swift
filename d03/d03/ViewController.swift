@@ -88,12 +88,31 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Dispose of any resources that can be recreated.
     }
     
-    func launchAlert(str: String) {
-        let alert = UIAlertController(title: "An error occured", message: str, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("Alert : \(str)")
-        }))
-        self.present(alert, animated: true, completion: nil)
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "photoDetailsSegue" {
+            if let s = sender as? CollectionViewCell {
+                if s.imageView != nil && s.imageView.image != nil {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "photoDetailsSegue" {
+            if let dest = segue.destination as? PhotoViewController { // cast de la destination
+                if let s = sender as? CollectionViewCell { // cast de la cellule (= le sender)
+                    if s.imageView.image != nil {
+                        dest.image = s.imageView.image
+                    } else {
+                        // on ne devrait jamais rentrer ici grace au shouldPerformSegue()
+                        print("In prepareForSegue : no image to pass")
+                    }
+                }
+            }
+            
+        }
     }
 
 }

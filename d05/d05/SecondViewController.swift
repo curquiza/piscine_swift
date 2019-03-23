@@ -10,13 +10,17 @@ import UIKit
 import MapKit
 import CoreLocation
 
+class MyPointAnnotation : MKPointAnnotation {
+    var color: UIColor?
+}
+
 class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
-    let annotation = MKPointAnnotation()
-    let regionRadius: CLLocationDistance = 1000
     var locationManager = CLLocationManager()
+    var userLocation: CLLocation?
     
-//    var location: CLLocation!
+    var currentPlace: Place? = nil
+
     
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
@@ -37,44 +41,113 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
             }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("second view appeared")
+        if currentPlace != nil {
+            self.centerMapOnPin(pin: currentPlace!)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.mapView.showsUserLocation = true;
+        print("second view loaded")
+        // Map types
         setSegBarUI()
-        set42Pin()
+        
+        // Pins init
+//        set42Pin()
 //        centerOn42School()
+        createAllPins()
+        
+        // set user location
         setLocationManager()
-        
-//        let center = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-//        centerMapOnLocation(location: center)
-        
-        
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    
+        if annotation.isEqual(mapView.userLocation) {
+            return nil
+        }
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "myAnnotation") as? MKPinAnnotationView
 
-    func set42Pin() {
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 48.896607, longitude: 2.3185009999999693)
-        annotation.title = "Ecole 42"
-        annotation.subtitle = "le QG"
-        mapView.addAnnotation(annotation)
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myAnnotation")
+            annotationView!.canShowCallout = true
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        if let annotation = annotation as? MyPointAnnotation {
+            annotationView?.pinTintColor = annotation.color
+        }
+    
+        return annotationView
     }
-
+    
+    
     func setSegBarUI() {
         segBar.backgroundColor = .white
         segBar.layer.cornerRadius = 5
     }
-
-    func centerOn42School() {
-        let initialLocation = CLLocation(latitude: 48.896607, longitude: 2.3185009999999693)
+    
+//    var annotations: [MKPointAnnotation] = []
+    func createAllPins() {
+        for place in Places {
+//            let pin: MKPointAnnotation = MKPointAnnotation()
+            let pin = MyPointAnnotation()
+            pin.coordinate = CLLocationCoordinate2D(latitude: place.latitude, longitude: place.longitude)
+            pin.title = place.title
+            pin.subtitle = place.subtitle
+            pin.color = getColor(colorStr: place.color)
+            self.mapView.addAnnotation(pin)
+            
+//            annotations.append(pin)
+        }
+        // self.mapView.addAnnotations(annotations)
+    }
+    
+    func getColor(colorStr: String) -> UIColor {
+        switch colorStr {
+        case "blue":
+            return .blue
+        case "green":
+            return .green
+        default:
+            return .red
+        }
+    }
+    
+    func centerMapOnPin(pin: Place) {
+        let initialLocation = CLLocation(latitude: pin.latitude, longitude: pin.longitude)
         centerMapOnLocation(location: initialLocation)
     }
 
+//    let annotation = MKPointAnnotation()
+//    func set42Pin() {
+//        if let ecole42Place = Places.first(where: { $0.title == "Ecole 42" }) {
+//            self.annotation.coordinate = CLLocationCoordinate2D(latitude: ecole42Place.latitude, longitude: ecole42Place.longitude)
+//            self.annotation.title = ecole42Place.title
+//            self.annotation.subtitle = ecole42Place.subtitle
+//            self.mapView.addAnnotation(self.annotation)
+//        }
+//    }
+
+//    func centerOn42School() {
+//        if let ecole42Place = Places.first(where: { $0.title == "Ecole 42" }) {
+//            let initialLocation = CLLocation(latitude: ecole42Place.latitude, longitude: ecole42Place.longitude)
+//            centerMapOnLocation(location: initialLocation)
+//        }
+//    }
+
     func centerMapOnLocation(location: CLLocation) {
+        let regionRadius: CLLocationDistance = 1000
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
     func setLocationManager() {
+        self.mapView.showsUserLocation = true;
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -83,18 +156,15 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     }
 
     @IBAction func centerButtonAction(_ sender: UIButton) {
-        print("center button")
-        if myLocation != nil {
-            centerMapOnLocation(location: myLocation!)
+        print("Pressing center button")
+        if userLocation != nil {
+            centerMapOnLocation(location: userLocation!)
         }
     }
     
-    var myLocation: CLLocation?
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("update de ouf")
-//        self.location = locations.last as! CLLocation
-        myLocation = locations.last
+        print("User location updated")
+        userLocation = locations.last
     }
 }
 

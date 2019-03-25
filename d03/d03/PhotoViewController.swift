@@ -25,11 +25,11 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         if image != nil {
             self.imageView = UIImageView(image: image)
             if self.imageView != nil {
+                photoScrollView.contentSize = (imageView?.bounds.size)!
+                setZoomScale(view.bounds.size)
                 photoScrollView.addSubview(self.imageView!)
-                photoScrollView.contentSize = (imageView?.frame.size)!
 //                photoScrollView.maximumZoomScale = image!.size.width
 //                photoScrollView.minimumZoomScale = 0.3
-                setZoomScale()
             }
         }
 
@@ -39,20 +39,30 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         return imageView
     }
     
-    func setZoomScale() {
-        let imageViewSize = imageView!.bounds.size
-        let scrollViewSize = photoScrollView.bounds.size
-//        let safe = view.safeAreaLayoutGuide.layoutFrame.height
-//        print("tto")
-//        print(imageViewSize)
-//        print(scrollViewSize)
-//        print(safe)
-        let widthScale = scrollViewSize.width / imageViewSize.width
-        let heightScale = scrollViewSize.height / imageViewSize.height
-        
-        photoScrollView.minimumZoomScale = min(widthScale, heightScale)
-        photoScrollView.zoomScale = 1.0
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setZoomScale(view.bounds.size)
     }
+    
+    func setZoomScale(_ size: CGSize) {
+        let widthScale = size.width / (imageView?.bounds.width)!
+        let heightScale = size.height / (imageView?.bounds.height)!
+        let minScale = min(widthScale, heightScale)
+        
+        photoScrollView.minimumZoomScale = minScale
+        photoScrollView.zoomScale = minScale
+    }
+    
+//    func setZoomScale() {
+//        let imageViewSize = imageView!.bounds.size
+//        let scrollViewSize = photoScrollView.bounds.size
+//        let widthScale = scrollViewSize.width / imageViewSize.width
+//        let heightScale = scrollViewSize.height / imageViewSize.height
+//
+//        photoScrollView.minimumZoomScale = min(widthScale, heightScale)
+//        photoScrollView.zoomScale = 1.0
+//    }
     
 //    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 //

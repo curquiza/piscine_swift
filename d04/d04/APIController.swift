@@ -44,7 +44,8 @@ class APIController {
         var component = URLComponents(string: "https://api.twitter.com/1.1/search/tweets.json")
         component?.queryItems = [
             URLQueryItem(name: "q", value: str),
-            URLQueryItem(name: "count", value: String(count))
+            URLQueryItem(name: "count", value: String(count)),
+            URLQueryItem(name: "lang", value: "fr")
         ]
         let url = component?.url
         

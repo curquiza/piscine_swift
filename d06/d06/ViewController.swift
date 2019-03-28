@@ -22,10 +22,6 @@ class ViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tapGesture)
         
-        // Init pan gesture
-//        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
-//        view.addGestureRecognizer(panGesture)
-        
         dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         
         // Gravity behaviour
@@ -51,19 +47,44 @@ class ViewController: UIViewController {
         }
     }
     
-
+    
+    var initialCenter = CGPoint()
     @objc func handlePan(gesture: UIPanGestureRecognizer) {
         guard gesture.view != nil else {return}
         let piece = gesture.view!
-        
-        gravityBehavior.removeItem(piece)
-        piece.center = gesture.location(in: piece.superview)
-        
-        if gesture.state == .ended {
+
+        if gesture.state == .began {
+            gravityBehavior.removeItem(piece)
+            initialCenter = piece.center
+        } else if gesture.state == .ended {
             gravityBehavior.addItem(piece)
+        } else if gesture.state == .changed {
+            piece.center = gesture.location(in: piece.superview)
+            dynamicAnimator.updateItem(usingCurrentState: piece)
+        } else {
+            piece.center = initialCenter
         }
         
-        dynamicAnimator.updateItem(usingCurrentState: piece)
+    }
+    
+    @objc func handlePinch(gesture: UIPinchGestureRecognizer) {
+        guard let piece = gesture.view else {return}
+        
+        if gesture.state == .began {
+            gravityBehavior.removeItem(piece)
+            itemBehavior.removeItem(piece)
+        } else if gesture.state == .ended {
+            gravityBehavior.addItem(piece)
+            itemBehavior.addItem(piece)
+        } else if gesture.state == .changed {
+            collisionBehavior.removeItem(piece)
+            let scale = gesture.scale
+            piece.layer.bounds.size.height *= scale
+            piece.layer.bounds.size.width *= scale
+            piece.layer.cornerRadius *= scale
+            gesture.scale = 1.0
+            collisionBehavior.addItem(piece)
+        }
     }
     
     func addNewShape(x: CGFloat, y: CGFloat) {
@@ -79,8 +100,10 @@ class ViewController: UIViewController {
         gravityBehavior.addItem(newShape)
         collisionBehavior.addItem(newShape)
         
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan))
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         newShape.addGestureRecognizer(panGesture)
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch))
+        newShape.addGestureRecognizer(pinchGesture)
     }
     
     func getShapeUIColor() -> UIColor {

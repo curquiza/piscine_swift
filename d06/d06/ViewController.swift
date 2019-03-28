@@ -86,6 +86,23 @@ class ViewController: UIViewController {
             collisionBehavior.addItem(piece)
         }
     }
+
+    @objc func handleRotation(gesture: UIRotationGestureRecognizer) {
+        guard let piece = gesture.view else {return}
+        
+        if gesture.state == .began {
+            gravityBehavior.removeItem(piece)
+            itemBehavior.removeItem(piece)
+        } else if gesture.state == .ended {
+            gravityBehavior.addItem(piece)
+            itemBehavior.addItem(piece)
+        } else if gesture.state == .changed {
+            collisionBehavior.removeItem(piece)
+            piece.transform = piece.transform.rotated(by: gesture.rotation)
+            gesture.rotation = 0
+            collisionBehavior.addItem(piece)
+        }
+    }
     
     func addNewShape(x: CGFloat, y: CGFloat) {
         print("Add new shape")
@@ -104,6 +121,8 @@ class ViewController: UIViewController {
         newShape.addGestureRecognizer(panGesture)
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch))
         newShape.addGestureRecognizer(pinchGesture)
+        let rotationGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotation))
+        newShape.addGestureRecognizer(rotationGesture)
     }
     
     func getShapeUIColor() -> UIColor {

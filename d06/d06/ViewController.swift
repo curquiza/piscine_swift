@@ -23,8 +23,8 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
         
         // Init pan gesture
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
-        view.addGestureRecognizer(panGesture)
+//        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
+//        view.addGestureRecognizer(panGesture)
         
         dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         
@@ -51,19 +51,19 @@ class ViewController: UIViewController {
         }
     }
     
+
     @objc func handlePan(gesture: UIPanGestureRecognizer) {
-        switch gesture.state {
-        case .began:
-            print("began")
-        case .changed:
-            print("changed to \(gesture.location(in: self.view))")
-        case .ended:
-            print("ended")
-        case .failed, .cancelled:
-            print("failed/cancelled")
-        case .possible:
-            print("possible")
+        guard gesture.view != nil else {return}
+        let piece = gesture.view!
+        
+        gravityBehavior.removeItem(piece)
+        piece.center = gesture.location(in: piece.superview)
+        
+        if gesture.state == .ended {
+            gravityBehavior.addItem(piece)
         }
+        
+        dynamicAnimator.updateItem(usingCurrentState: piece)
     }
     
     func addNewShape(x: CGFloat, y: CGFloat) {
@@ -78,6 +78,9 @@ class ViewController: UIViewController {
         itemBehavior.addItem(newShape)
         gravityBehavior.addItem(newShape)
         collisionBehavior.addItem(newShape)
+        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan))
+        newShape.addGestureRecognizer(panGesture)
     }
     
     func getShapeUIColor() -> UIColor {

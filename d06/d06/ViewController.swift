@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreMotion
 
 class ViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class ViewController: UIViewController {
     var gravityBehavior: UIGravityBehavior!
     var collisionBehavior: UICollisionBehavior!
     var itemBehavior: UIDynamicItemBehavior!
+    var motionManager: CMMotionManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,18 @@ class ViewController: UIViewController {
         itemBehavior = UIDynamicItemBehavior()
         itemBehavior.elasticity = 0.6
         dynamicAnimator.addBehavior(itemBehavior)
+        
+        // CoreMotion
+        motionManager = CMMotionManager()
+        if motionManager.isAccelerometerAvailable {
+            motionManager.accelerometerUpdateInterval = 0.2
+            let queue = OperationQueue.main
+            motionManager.startAccelerometerUpdates(to: queue, withHandler: handleAccelerometer as! CMAccelerometerHandler)
+        }
+    }
+    
+    func handleAccelerometer(data: CMAccelerometerData?, error: NSError?) {
+        print("Accelerometer")
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer) {

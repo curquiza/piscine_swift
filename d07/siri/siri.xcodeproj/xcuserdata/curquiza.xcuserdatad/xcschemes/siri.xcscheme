@@ -67,12 +67,12 @@
          <EnvironmentVariable
             key = "RECAST_TOKEN"
             value = "dc0874eeb99cfaca46effa13e255a668"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "DARKSKY_TOKEN"
             value = "c1ceb44bdd08b0431d2885212633bb9a"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
       <AdditionalOptions>

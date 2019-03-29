@@ -36,7 +36,6 @@ class ViewController: UIViewController {
             print("Intention -> Location: \(loc.raw) ; Lat: \(lat) ; Long: \(long)")
             darkskyClient?.getForecast(latitude: Double(lat), longitude: Double(long), completion: {
                 (response) in
-                print(response)
                 print("Darksky is answering...")
                 switch response {
                 case .failure(let e):

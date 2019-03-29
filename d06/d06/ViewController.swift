@@ -45,12 +45,18 @@ class ViewController: UIViewController {
         if motionManager.isAccelerometerAvailable {
             motionManager.accelerometerUpdateInterval = 0.2
             let queue = OperationQueue.main
-            motionManager.startAccelerometerUpdates(to: queue, withHandler: handleAccelerometer as! CMAccelerometerHandler)
+            motionManager.startAccelerometerUpdates(to: queue, withHandler: handleAccelerometer)
         }
     }
     
-    func handleAccelerometer(data: CMAccelerometerData?, error: NSError?) {
+    func handleAccelerometer(data: CMAccelerometerData?, error: Error?) {
         print("Accelerometer")
+        if let myData = data {
+            let x = CGFloat(myData.acceleration.x);
+            let y = CGFloat(myData.acceleration.y);
+            let v = CGVector(dx: x, dy: -y);
+            self.gravityBehavior.gravityDirection = v;
+        }
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer) {

@@ -126,11 +126,8 @@ class ViewController: UIViewController {
     
     func addNewShape(x: CGFloat, y: CGFloat) {
         print("Add new shape")
-        let newShape = UIView(frame: CGRect(x: x - 50, y: y - 50, width: 100, height: 100))
-        if (arc4random_uniform(2) == 1) {
-          newShape.layer.cornerRadius = 50
-        }
-        newShape.backgroundColor = getShapeUIColor()
+        
+        let newShape = Shape(x: x - 50, y: y - 50)
         self.view.addSubview(newShape)
         
         itemBehavior.addItem(newShape)
@@ -143,6 +140,25 @@ class ViewController: UIViewController {
         newShape.addGestureRecognizer(pinchGesture)
         let rotationGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotation))
         newShape.addGestureRecognizer(rotationGesture)
+    }
+
+}
+
+class Shape : UIView {
+    
+    let width: CGFloat = 100
+    let height: CGFloat = 100
+    
+    init(x: CGFloat, y: CGFloat) {
+        super.init(frame: CGRect(x: x, y: y, width: width, height: height))
+        if (arc4random_uniform(2) == 1) {
+            self.layer.cornerRadius = 50
+        }
+        self.backgroundColor = self.getShapeUIColor()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func getShapeUIColor() -> UIColor {
@@ -162,5 +178,4 @@ class ViewController: UIViewController {
             return .black
         }
     }
-
 }

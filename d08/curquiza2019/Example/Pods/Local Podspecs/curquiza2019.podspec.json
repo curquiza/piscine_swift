@@ -1,0 +1,22 @@
+{
+  "name": "curquiza2019",
+  "version": "0.1.0",
+  "summary": "A short description of curquiza2019.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Clementine Urquizar/curquiza2019",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Clementine Urquizar": "clementine.urquizar@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Clementine Urquizar/curquiza2019.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "curquiza2019/Classes/**/*"
+}

@@ -7,21 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02CEFD6289DA7EB2869CB9A4D168A6D4 /* curquiza2019-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CB80EE53211354C976AB3BD257844A /* curquiza2019-dummy.m */; };
-		0F73DB8876C890221D2894ABDA76F592 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C3AA4211197C1E9EF4B21CD10CBECB /* UIKit.framework */; };
 		193ED43F55B62D2442D1E400F96F2C7E /* Pods-curquiza2019_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C835F8955979F4CDEC7E15A6452D2813 /* Pods-curquiza2019_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1CC20824DE2E43D3C2FF1A171D913B97 /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA7DE9A9DEB31E4E584ED723E042DE /* ArticleManager.swift */; };
 		2488094454BCAA334C21E7EA6577A4DE /* Pods-curquiza2019_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B988BC8062D39B729D2F64E564F899AD /* Pods-curquiza2019_Example-dummy.m */; };
-		41DD4758E01390E90B6FDDB12F4EF095 /* Article+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A54B41767706D6AD8D961682EADE63A /* Article+CoreDataProperties.swift */; };
-		6302D2D4703EE9C1DEFC88363E3E4258 /* curquiza2019-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC2CE37B316DBC673718FFD9115C5060 /* curquiza2019-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		683E2665DF3F6CE48730DB447E4780C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267854BAEC5BC62FA8D657A2860F2B2F /* Foundation.framework */; };
+		5850F0DF4B1C1998CF72D7C59AFA20DE /* curquiza2019-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5827864EEDA828FFA08D67F2AF95E2FA /* curquiza2019-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66E58F2D8DE3572FF1FA9D85D5DFC95A /* curquiza2019-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A983BCD4450A64F3C7D2FE928893D /* curquiza2019-dummy.m */; };
+		683E2665DF3F6CE48730DB447E4780C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		79EC39C799637E5D51A1AF2DC4B17CBA /* Pods-curquiza2019_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6547FD9BA86453CC1B4863E3CC0AC4D3 /* Pods-curquiza2019_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82006F4BB06A261C9779A6D059C2502D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267854BAEC5BC62FA8D657A2860F2B2F /* Foundation.framework */; };
-		88E1A969FC7BF0620387EC9DEDD22D59 /* Article+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2710B963C5B8FE9221913FD18F15E26 /* Article+CoreDataClass.swift */; };
-		B2B361736F82F3557C4605AC8F9F6038 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDFAD6DEC36E849FB16E19BBB883887 /* MapKit.framework */; };
+		82006F4BB06A261C9779A6D059C2502D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		BB65AC5646EFF69933E6C62D3227431F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1DA507BBE9CD02F0D6DDC862C7CE3E /* ReplaceMe.swift */; };
+		C940CAD53240BCDCA77FA64C8F7E5958 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		E5BA8AD4E99D190615C8B5E05F949F26 /* Pods-curquiza2019_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B66CDD1D21A5DEC35139E5C2E171E2 /* Pods-curquiza2019_Tests-dummy.m */; };
-		EE462AA505783550AEA97CD44AC281D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267854BAEC5BC62FA8D657A2860F2B2F /* Foundation.framework */; };
-		F7A23D336BD1CC6D8CC88CEB3B267958 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED86B12EBDCDF45EB45E1B415C3FB73 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,49 +31,44 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6401A762479E553701F69342B0FA6F25;
+			remoteGlobalIDString = 860F147E70E900E2EFD9552E18FFA973;
 			remoteInfo = curquiza2019;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1CDFAD6DEC36E849FB16E19BBB883887 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
-		25BA2A93DD709108A51E661FDC123BCC /* Pods_curquiza2019_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_curquiza2019_Tests.framework; path = "Pods-curquiza2019_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		267854BAEC5BC62FA8D657A2860F2B2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1A26340E1D47ADEE29E94985CB8D64E6 /* curquiza2019-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "curquiza2019-prefix.pch"; sourceTree = "<group>"; };
+		25BA2A93DD709108A51E661FDC123BCC /* Pods_curquiza2019_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_curquiza2019_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		276A98B167439C592EF773C84B789C55 /* curquiza2019-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "curquiza2019-Info.plist"; sourceTree = "<group>"; };
 		2D62B84EAE955198C904E59BB37F368F /* Pods-curquiza2019_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-curquiza2019_Tests.modulemap"; sourceTree = "<group>"; };
-		31588AC934096AAC801FC7EB1EDDB57E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2E1DA507BBE9CD02F0D6DDC862C7CE3E /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = curquiza2019/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		367552A977EE69FF2965960C14CA75F8 /* Pods-curquiza2019_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-curquiza2019_Example-frameworks.sh"; sourceTree = "<group>"; };
 		38C5D21FC6D91EB7DF68C98C330DFDE8 /* Pods-curquiza2019_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-curquiza2019_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		446904C2C3471EA7100A8CF7B65221A9 /* Pods-curquiza2019_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-curquiza2019_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4507695254DA86761EDD8687BC18BCAB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		45B66CDD1D21A5DEC35139E5C2E171E2 /* Pods-curquiza2019_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-curquiza2019_Tests-dummy.m"; sourceTree = "<group>"; };
 		462CF01AB99AD6C928DA31CCBE2511C3 /* Pods-curquiza2019_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-curquiza2019_Example-Info.plist"; sourceTree = "<group>"; };
-		49ED19C2A99D302ED8AF21D95AEC564E /* curquiza2019.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = curquiza2019.xcconfig; sourceTree = "<group>"; };
-		6403C58611D62567FE8B3DCAE59C8655 /* curquiza2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = curquiza2019.framework; path = curquiza2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5827864EEDA828FFA08D67F2AF95E2FA /* curquiza2019-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "curquiza2019-umbrella.h"; sourceTree = "<group>"; };
+		6403C58611D62567FE8B3DCAE59C8655 /* curquiza2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = curquiza2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6547FD9BA86453CC1B4863E3CC0AC4D3 /* Pods-curquiza2019_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-curquiza2019_Tests-umbrella.h"; sourceTree = "<group>"; };
-		6BF76A96C1F9A5D45080677CA0BF293D /* curquiza2019-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "curquiza2019-Info.plist"; sourceTree = "<group>"; };
 		79CB847D3E11F2DF1B222A88797856EA /* Pods-curquiza2019_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-curquiza2019_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7A54B41767706D6AD8D961682EADE63A /* Article+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Article+CoreDataProperties.swift"; path = "curquiza2019/Classes/Article+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7E681194A0B055641DE9206C66D21D40 /* Pods-curquiza2019_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-curquiza2019_Tests-Info.plist"; sourceTree = "<group>"; };
-		8F073C8665BDBC8BDBCF27E0840221E3 /* curquiza2019.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = curquiza2019.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		91C3AA4211197C1E9EF4B21CD10CBECB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8D84BBA63ABC5F5E6A3BE1A426478DFB /* curquiza2019.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = curquiza2019.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		9790DF94FFB87307C433A9CBD2E25233 /* Pods-curquiza2019_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-curquiza2019_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9B791E2F2BC0B9F425F2CA000A51D27F /* curquiza2019.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = curquiza2019.modulemap; sourceTree = "<group>"; };
 		9C6170FECB97DE794A998A7734FE5B89 /* Pods-curquiza2019_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-curquiza2019_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A21C454E8EDD12E25D9630CE0E12A051 /* Pods_curquiza2019_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_curquiza2019_Example.framework; path = "Pods-curquiza2019_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AED86B12EBDCDF45EB45E1B415C3FB73 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
-		AFF91E1490F00F83938A337DCDB48CB5 /* curquiza2019-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "curquiza2019-prefix.pch"; sourceTree = "<group>"; };
-		B3CB80EE53211354C976AB3BD257844A /* curquiza2019-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "curquiza2019-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E6613F5FA311B4C4C4953FBF5D46CFC /* curquiza2019.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = curquiza2019.xcconfig; sourceTree = "<group>"; };
+		A21C454E8EDD12E25D9630CE0E12A051 /* Pods_curquiza2019_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_curquiza2019_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B988BC8062D39B729D2F64E564F899AD /* Pods-curquiza2019_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-curquiza2019_Example-dummy.m"; sourceTree = "<group>"; };
+		BCD20EEC20C31537B15133B8B988F8A1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BD88D078D3422D5F3FE9CA50C9E5FC9D /* Pods-curquiza2019_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-curquiza2019_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4605A102EEA6F240139D8FD1B523BDE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C835F8955979F4CDEC7E15A6452D2813 /* Pods-curquiza2019_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-curquiza2019_Example-umbrella.h"; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D86A983BCD4450A64F3C7D2FE928893D /* curquiza2019-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "curquiza2019-dummy.m"; sourceTree = "<group>"; };
+		DA1DB3D28CA82F1C708C0487D9EFD78F /* curquiza2019.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = curquiza2019.modulemap; sourceTree = "<group>"; };
 		DC563C028225766E417EF17DC10A49BA /* Pods-curquiza2019_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-curquiza2019_Example.modulemap"; sourceTree = "<group>"; };
 		DCE8EDF5FF9C5D8855547B61D885DA04 /* Pods-curquiza2019_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-curquiza2019_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		E2710B963C5B8FE9221913FD18F15E26 /* Article+CoreDataClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Article+CoreDataClass.swift"; path = "curquiza2019/Classes/Article+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E8560F488AE89BD4A5FC59C601D14F89 /* Pods-curquiza2019_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-curquiza2019_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EBAA7DE9A9DEB31E4E584ED723E042DE /* ArticleManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArticleManager.swift; path = curquiza2019/Classes/ArticleManager.swift; sourceTree = "<group>"; };
-		EC2CE37B316DBC673718FFD9115C5060 /* curquiza2019-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "curquiza2019-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,22 +80,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B41C011BE5B3EBA56B262CC46EB943D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C940CAD53240BCDCA77FA64C8F7E5958 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D59B475EBA42A02280B9659342BD610B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				82006F4BB06A261C9779A6D059C2502D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F96E953B949F416978AAE2E5DCA7EC49 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7A23D336BD1CC6D8CC88CEB3B267958 /* CoreData.framework in Frameworks */,
-				EE462AA505783550AEA97CD44AC281D7 /* Foundation.framework in Frameworks */,
-				B2B361736F82F3557C4605AC8F9F6038 /* MapKit.framework in Frameworks */,
-				0F73DB8876C890221D2894ABDA76F592 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,15 +109,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1B6FD5450044409A8289882E5DCB4F3E /* Support Files */ = {
+		1892DF5C864027FCCD2DB15F27F910A9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9B791E2F2BC0B9F425F2CA000A51D27F /* curquiza2019.modulemap */,
-				49ED19C2A99D302ED8AF21D95AEC564E /* curquiza2019.xcconfig */,
-				B3CB80EE53211354C976AB3BD257844A /* curquiza2019-dummy.m */,
-				6BF76A96C1F9A5D45080677CA0BF293D /* curquiza2019-Info.plist */,
-				AFF91E1490F00F83938A337DCDB48CB5 /* curquiza2019-prefix.pch */,
-				EC2CE37B316DBC673718FFD9115C5060 /* curquiza2019-umbrella.h */,
+				DA1DB3D28CA82F1C708C0487D9EFD78F /* curquiza2019.modulemap */,
+				9E6613F5FA311B4C4C4953FBF5D46CFC /* curquiza2019.xcconfig */,
+				D86A983BCD4450A64F3C7D2FE928893D /* curquiza2019-dummy.m */,
+				276A98B167439C592EF773C84B789C55 /* curquiza2019-Info.plist */,
+				1A26340E1D47ADEE29E94985CB8D64E6 /* curquiza2019-prefix.pch */,
+				5827864EEDA828FFA08D67F2AF95E2FA /* curquiza2019-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/curquiza2019";
@@ -152,15 +139,33 @@
 			path = "Target Support Files/Pods-curquiza2019_Tests";
 			sourceTree = "<group>";
 		};
-		2C85EF5A862FD5BE2F30AD24307FFAAA /* iOS */ = {
+		2B6DA381814EA5A15A91245899EB86CE /* curquiza2019 */ = {
 			isa = PBXGroup;
 			children = (
-				AED86B12EBDCDF45EB45E1B415C3FB73 /* CoreData.framework */,
-				267854BAEC5BC62FA8D657A2860F2B2F /* Foundation.framework */,
-				1CDFAD6DEC36E849FB16E19BBB883887 /* MapKit.framework */,
-				91C3AA4211197C1E9EF4B21CD10CBECB /* UIKit.framework */,
+				2E1DA507BBE9CD02F0D6DDC862C7CE3E /* ReplaceMe.swift */,
+				52435C877EFE6BEABEBA1CD12A8A8751 /* Pod */,
+				1892DF5C864027FCCD2DB15F27F910A9 /* Support Files */,
 			);
-			name = iOS;
+			name = curquiza2019;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		52435C877EFE6BEABEBA1CD12A8A8751 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8D84BBA63ABC5F5E6A3BE1A426478DFB /* curquiza2019.podspec */,
+				BCD20EEC20C31537B15133B8B988F8A1 /* LICENSE */,
+				C4605A102EEA6F240139D8FD1B523BDE /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		63DF418ED8AD979321640BE36801C364 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B6DA381814EA5A15A91245899EB86CE /* curquiza2019 */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		77EC59DB0A7F6317B8AE4DC7AEB1E82E /* Targets Support Files */ = {
@@ -172,22 +177,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7FD31CC670C738EC0DF726C14B4A090F /* Pod */ = {
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8F073C8665BDBC8BDBCF27E0840221E3 /* curquiza2019.podspec */,
-				4507695254DA86761EDD8687BC18BCAB /* LICENSE */,
-				31588AC934096AAC801FC7EB1EDDB57E /* README.md */,
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2C85EF5A862FD5BE2F30AD24307FFAAA /* iOS */,
-			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		C5B62D0A22CE7EA78375087E454D7A77 /* Pods-curquiza2019_Example */ = {
@@ -211,32 +206,19 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				E411BBD19ED260F9BCAA599F98EF404F /* Development Pods */,
-				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
+				63DF418ED8AD979321640BE36801C364 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				02066580E83359E9207557AAB0A095B6 /* Products */,
 				77EC59DB0A7F6317B8AE4DC7AEB1E82E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		DE44DB5D5B262C30607EFCADDF1F8641 /* curquiza2019 */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2710B963C5B8FE9221913FD18F15E26 /* Article+CoreDataClass.swift */,
-				7A54B41767706D6AD8D961682EADE63A /* Article+CoreDataProperties.swift */,
-				EBAA7DE9A9DEB31E4E584ED723E042DE /* ArticleManager.swift */,
-				7FD31CC670C738EC0DF726C14B4A090F /* Pod */,
-				1B6FD5450044409A8289882E5DCB4F3E /* Support Files */,
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
 			);
-			name = curquiza2019;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		E411BBD19ED260F9BCAA599F98EF404F /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DE44DB5D5B262C30607EFCADDF1F8641 /* curquiza2019 */,
-			);
-			name = "Development Pods";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,11 +232,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92923E57A69D60333EC21C006BCE8F68 /* Headers */ = {
+		6FBF4C7F8B3178142B38C4E04FEB6552 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6302D2D4703EE9C1DEFC88363E3E4258 /* curquiza2019-umbrella.h in Headers */,
+				5850F0DF4B1C1998CF72D7C59AFA20DE /* curquiza2019-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,24 +270,6 @@
 			productReference = 25BA2A93DD709108A51E661FDC123BCC /* Pods_curquiza2019_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6401A762479E553701F69342B0FA6F25 /* curquiza2019 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 75F4845E776186F8CCA73452894EE4B5 /* Build configuration list for PBXNativeTarget "curquiza2019" */;
-			buildPhases = (
-				92923E57A69D60333EC21C006BCE8F68 /* Headers */,
-				C29AD25AF459079EEDB3FA4973F6CAD0 /* Sources */,
-				F96E953B949F416978AAE2E5DCA7EC49 /* Frameworks */,
-				6784A8C283AD330B94F050EFCC9B48CA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = curquiza2019;
-			productName = curquiza2019;
-			productReference = 6403C58611D62567FE8B3DCAE59C8655 /* curquiza2019.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		83C3E0AC26ABF12F5A1293FE523E3289 /* Pods-curquiza2019_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F624704DB36585D81C033ABC67DE312B /* Build configuration list for PBXNativeTarget "Pods-curquiza2019_Example" */;
@@ -323,6 +287,24 @@
 			name = "Pods-curquiza2019_Example";
 			productName = "Pods-curquiza2019_Example";
 			productReference = A21C454E8EDD12E25D9630CE0E12A051 /* Pods_curquiza2019_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		860F147E70E900E2EFD9552E18FFA973 /* curquiza2019 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B40D6CD22152762862A8B1486DF5F6FC /* Build configuration list for PBXNativeTarget "curquiza2019" */;
+			buildPhases = (
+				6FBF4C7F8B3178142B38C4E04FEB6552 /* Headers */,
+				361555EBB1D465F0725862D0AAE885A5 /* Sources */,
+				B41C011BE5B3EBA56B262CC46EB943D8 /* Frameworks */,
+				59CAFAA7A784839E919523E184B66D1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = curquiza2019;
+			productName = curquiza2019;
+			productReference = 6403C58611D62567FE8B3DCAE59C8655 /* curquiza2019.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -346,7 +328,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6401A762479E553701F69342B0FA6F25 /* curquiza2019 */,
+				860F147E70E900E2EFD9552E18FFA973 /* curquiza2019 */,
 				83C3E0AC26ABF12F5A1293FE523E3289 /* Pods-curquiza2019_Example */,
 				377B6C7953BC37BCA36BCABFDF4AF6D3 /* Pods-curquiza2019_Tests */,
 			);
@@ -361,7 +343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6784A8C283AD330B94F050EFCC9B48CA /* Resources */ = {
+		59CAFAA7A784839E919523E184B66D1C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,22 +360,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		361555EBB1D465F0725862D0AAE885A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E58F2D8DE3572FF1FA9D85D5DFC95A /* curquiza2019-dummy.m in Sources */,
+				BB65AC5646EFF69933E6C62D3227431F /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5721E7083D2413E38C54FA0B38832D6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2488094454BCAA334C21E7EA6577A4DE /* Pods-curquiza2019_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C29AD25AF459079EEDB3FA4973F6CAD0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88E1A969FC7BF0620387EC9DEDD22D59 /* Article+CoreDataClass.swift in Sources */,
-				41DD4758E01390E90B6FDDB12F4EF095 /* Article+CoreDataProperties.swift in Sources */,
-				1CC20824DE2E43D3C2FF1A171D913B97 /* ArticleManager.swift in Sources */,
-				02CEFD6289DA7EB2869CB9A4D168A6D4 /* curquiza2019-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,44 +397,12 @@
 		E54D61E552256F1E22F4DF2F6CF6CBD9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = curquiza2019;
-			target = 6401A762479E553701F69342B0FA6F25 /* curquiza2019 */;
+			target = 860F147E70E900E2EFD9552E18FFA973 /* curquiza2019 */;
 			targetProxy = 49CBDA3E69975B6FCE0CE9B8EA596DEA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0412BDC7639BCADEA72DFB04F7751E33 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49ED19C2A99D302ED8AF21D95AEC564E /* curquiza2019.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/curquiza2019/curquiza2019-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/curquiza2019/curquiza2019-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/curquiza2019/curquiza2019.modulemap";
-				PRODUCT_MODULE_NAME = curquiza2019;
-				PRODUCT_NAME = curquiza2019;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		14B8B7B6D6BF9196093C5088A684D71B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9790DF94FFB87307C433A9CBD2E25233 /* Pods-curquiza2019_Tests.release.xcconfig */;
@@ -488,6 +436,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		396300C290B7C8083D5C24D6705C85CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E6613F5FA311B4C4C4953FBF5D46CFC /* curquiza2019.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/curquiza2019/curquiza2019-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/curquiza2019/curquiza2019-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/curquiza2019/curquiza2019.modulemap";
+				PRODUCT_MODULE_NAME = curquiza2019;
+				PRODUCT_NAME = curquiza2019;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		4A72F8D0EC62806F3B44B94AECCB0D9F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -583,37 +562,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A3BB1B20CDE3742A964EC220806ACA9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49ED19C2A99D302ED8AF21D95AEC564E /* curquiza2019.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/curquiza2019/curquiza2019-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/curquiza2019/curquiza2019-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/curquiza2019/curquiza2019.modulemap";
-				PRODUCT_MODULE_NAME = curquiza2019;
-				PRODUCT_NAME = curquiza2019;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -744,6 +692,38 @@
 			};
 			name = Release;
 		};
+		F32AE4E70A154B9EF15A859C85B896D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E6613F5FA311B4C4C4953FBF5D46CFC /* curquiza2019.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/curquiza2019/curquiza2019-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/curquiza2019/curquiza2019-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/curquiza2019/curquiza2019.modulemap";
+				PRODUCT_MODULE_NAME = curquiza2019;
+				PRODUCT_NAME = curquiza2019;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -765,11 +745,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75F4845E776186F8CCA73452894EE4B5 /* Build configuration list for PBXNativeTarget "curquiza2019" */ = {
+		B40D6CD22152762862A8B1486DF5F6FC /* Build configuration list for PBXNativeTarget "curquiza2019" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A3BB1B20CDE3742A964EC220806ACA9F /* Debug */,
-				0412BDC7639BCADEA72DFB04F7751E33 /* Release */,
+				396300C290B7C8083D5C24D6705C85CD /* Debug */,
+				F32AE4E70A154B9EF15A859C85B896D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

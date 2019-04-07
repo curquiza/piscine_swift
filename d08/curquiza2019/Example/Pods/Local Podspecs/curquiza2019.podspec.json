@@ -1,9 +1,10 @@
 {
   "name": "curquiza2019",
   "version": "0.1.0",
-  "summary": "A short description of curquiza2019.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Clementine Urquizar/curquiza2019",
+  "summary": "article manager",
+  "swift_version": "4.0",
+  "description": "Methods :\n- get\n- get all\n- update\n- create\n- delete",
+  "homepage": "https://www.42.fr/",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -18,5 +19,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "curquiza2019/Classes/**/*"
+  "source_files": "curquiza2019/**/*.{h,m,swift,xcdatamodeld}",
+  "frameworks": [
+    "UIKit",
+    "MapKit",
+    "CoreData"
+  ]
 }

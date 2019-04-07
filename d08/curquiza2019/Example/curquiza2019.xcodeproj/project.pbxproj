@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		89D5DA03B144830EE5C33DCE /* Pods_curquiza2019_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59E3A2B6670DE02833BF560 /* Pods_curquiza2019_Tests.framework */; };
+		DBF99BF222566D7A0022C58E /* article.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBF99BF022566D7A0022C58E /* article.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,7 @@
 		20174E2A5DC39C54161A1AE9 /* Pods-curquiza2019_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-curquiza2019_Tests.debug.xcconfig"; path = "Target Support Files/Pods-curquiza2019_Tests/Pods-curquiza2019_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		297FD3C3FC8AB7EE061FD97D /* Pods-curquiza2019_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-curquiza2019_Tests.release.xcconfig"; path = "Target Support Files/Pods-curquiza2019_Tests/Pods-curquiza2019_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5304C1A4E8C8ACA95F09F129 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		602B784EBC1F803E2356462B /* curquiza2019.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = curquiza2019.podspec; path = ../curquiza2019.podspec; sourceTree = "<group>"; };
+		602B784EBC1F803E2356462B /* curquiza2019.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = curquiza2019.podspec; path = ../curquiza2019.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* curquiza2019_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = curquiza2019_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		8A4FD26CBDDF8A648ABA8F05 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		95B2FC73A49AD9150E92160B /* Pods_curquiza2019_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_curquiza2019_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D873AA5B900E02AB4812FA /* Pods-curquiza2019_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-curquiza2019_Example.release.xcconfig"; path = "Target Support Files/Pods-curquiza2019_Example/Pods-curquiza2019_Example.release.xcconfig"; sourceTree = "<group>"; };
+		DBF99BF122566D7A0022C58E /* article.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = article.xcdatamodel; sourceTree = "<group>"; };
 		E59E3A2B6670DE02833BF560 /* Pods_curquiza2019_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_curquiza2019_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				DBF99BF022566D7A0022C58E /* article.xcdatamodeld */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for curquiza2019 */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -170,7 +173,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				2B70FB50A56005ECB3EF4988 /* [CP] Embed Pods Frameworks */,
+				2390E4BD03BBD4D5AD8E8BB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,7 +282,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2B70FB50A56005ECB3EF4988 /* [CP] Embed Pods Frameworks */ = {
+		2390E4BD03BBD4D5AD8E8BB8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,6 +327,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				DBF99BF222566D7A0022C58E /* article.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +569,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DBF99BF022566D7A0022C58E /* article.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DBF99BF122566D7A0022C58E /* article.xcdatamodel */,
+			);
+			currentVersion = DBF99BF122566D7A0022C58E /* article.xcdatamodel */;
+			name = article.xcdatamodeld;
+			path = ../curquiza2019/Classes/article.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }

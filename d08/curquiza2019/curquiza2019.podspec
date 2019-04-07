@@ -36,7 +36,14 @@ Methods :
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'curquiza2019/Classes/**/*'
+  #s.source_files = 'curquiza2019/Classes/**/*'
+
+  s.source_files = 'curquiza2019/**/*.{h,m,swift,xcdatamodeld}'
+  #s.resources = 'curquiza/Classes/curquiza2019*.xcdatamodeld'
+  
+  #s.source_files  = 'curquiza2019/Classes/article.xcdatamodeld', 'curquiza/Classes/article.xcdatamodeld/*.xcdatamodel'
+  #s.resources = [ 'curquiza2019/Classes/article.xcdatamodeld','curquiza2019/Classes/article.xcdatamodeld/*.xcdatamodel']
+  #s.preserve_paths = 'curquiza2019/Classes/article.xcdatamodeld'
   
   # s.resource_bundles = {
   #   'curquiza2019' => ['curquiza2019/Assets/*.png']

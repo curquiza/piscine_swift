@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../curquiza2019/Classes/Article+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../curquiza2019/Classes/Article+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../curquiza2019/Classes/article.xcdatamodeld">
+   </FileRef>
+   <FileRef
       location = "group:curquiza2019.xcodeproj">
    </FileRef>
    <FileRef

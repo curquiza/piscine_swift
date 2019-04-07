@@ -30,6 +30,7 @@ class DeathNoteTableViewCell: UITableViewCell {
             if let n = note {
                 nameLabel?.text = n.name
                 let formatter = DateFormatter()
+                formatter.locale = Locale(identifier: "FR-fr")
                 formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                 dateLabel?.text = formatter.string(from: n.date)
                 descriptionLabel?.text = n.description

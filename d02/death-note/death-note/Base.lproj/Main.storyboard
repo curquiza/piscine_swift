@@ -118,6 +118,7 @@
                                         <date key="date" timeIntervalSinceReferenceDate="573756140.28405702">
                                             <!--2019-03-08 16:42:20 +0000-->
                                         </date>
+                                        <locale key="locale" localeIdentifier="fr"/>
                                     </datePicker>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kUw-S6-aEe">
                                         <rect key="frame" x="0.0" y="425" width="335" height="128"/>

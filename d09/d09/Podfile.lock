@@ -1,0 +1,16 @@
+PODS:
+  - curquiza2019 (0.1.0)
+
+DEPENDENCIES:
+  - curquiza2019 (from `./curquiza2019`)
+
+EXTERNAL SOURCES:
+  curquiza2019:
+    :path: "./curquiza2019"
+
+SPEC CHECKSUMS:
+  curquiza2019: e3107c95e2686c0040ef38860cf442dd03bcae91
+
+PODFILE CHECKSUM: 31dbc2ff4ceb9bda5a4d29a3a4eb359f0df91b24
+
+COCOAPODS: 1.6.1

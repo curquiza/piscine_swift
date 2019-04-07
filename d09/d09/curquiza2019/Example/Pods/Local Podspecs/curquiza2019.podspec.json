@@ -1,0 +1,33 @@
+{
+  "name": "curquiza2019",
+  "version": "0.1.0",
+  "summary": "article manager",
+  "swift_version": "4.0",
+  "description": "Methods :\n- get\n- get all\n- update\n- create\n- delete",
+  "homepage": "https://www.42.fr/",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Clementine Urquizar": "clementine.urquizar@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Clementine Urquizar/curquiza2019.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "resource_bundles": {
+    "curquiza2019": [
+      "curquiza2019/**/*.xcdatamodeld"
+    ]
+  },
+  "source_files": "curquiza2019/Classes/*.swift",
+  "frameworks": [
+    "UIKit",
+    "MapKit",
+    "CoreData"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "bdalcan2018",
+  "version": "0.1.0",
+  "summary": "The poddest pod in the galaxy",
+  "description": "I\\m still not sure what this pod is going to do, but I will let you know once I find out!",
+  "swift_version": "4.0",
+  "homepage": "https://github.com/BeFunes",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "BeFunes": "bdal-can@student.42.fr"
+  },
+  "source": {
+    "git": "https://github.com/BeFunes/bdalcan2018.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "bdalcan2018/Classes/*.swift",
+  "resources": "bdalcan2018/Classes/*.xcdatamodeld",
+  "frameworks": [
+    "UIKit",
+    "MapKit",
+    "CoreData"
+  ]
+}

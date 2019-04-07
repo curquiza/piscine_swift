@@ -67,11 +67,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func launchAlert(str: String) {
-        let alert = UIAlertController(title: "An error occured", message: str, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("Alert : \(str)")
-        }))
-        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "An error occured", message: str, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("Alert : \(str)")
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
